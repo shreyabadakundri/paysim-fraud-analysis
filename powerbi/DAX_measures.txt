@@ -1,0 +1,24 @@
+// Paste in Power BI after loading outputs/fraud_by_type.csv and fraud_by_amount_band.csv
+// Or load a single custom table with rule metrics from metrics.json.
+
+// Example: if you model a fact table `Transactions` with columns Type, Amount, IsFraud, RuleFlag
+
+Total Transactions = COUNTROWS ( Transactions )
+
+Total Fraud =
+CALCULATE ( COUNTROWS ( Transactions ), Transactions[IsFraud] = 1 )
+
+Fraud Rate % =
+DIVIDE ( [Total Fraud], [Total Transactions] )
+
+Rule Flagged =
+CALCULATE ( COUNTROWS ( Transactions ), Transactions[RuleFlag] = 1 )
+
+Fraud Caught by Rule =
+CALCULATE ( COUNTROWS ( Transactions ), Transactions[RuleFlag] = 1, Transactions[IsFraud] = 1 )
+
+Rule Catch Rate % =
+DIVIDE ( [Fraud Caught by Rule], [Total Fraud] )
+
+Rule Precision % =
+DIVIDE ( [Fraud Caught by Rule], [Rule Flagged] )

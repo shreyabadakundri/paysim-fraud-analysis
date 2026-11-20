@@ -1,0 +1,20 @@
+# Raw PaySim file (~470 MB) — download locally; do not commit
+data/Fraud.csv
+data/*.csv
+
+# Hugging Face / tool caches
+data/.cache/
+**/__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Secrets
+.env
+.env.*
+.kaggle/

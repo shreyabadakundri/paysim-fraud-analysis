@@ -1,0 +1,6 @@
+amount_band,txn_count,fraud_count,fraud_rate_pct
+1. Under 10k,5720991,0,0
+2. 10k to 50k,521331,382,0.0733
+3. 50k to 100k,22110,327,1.4787
+4. 100k to 500k,83545,5454,6.5288
+5. 500k and above,43643,2050,4.6968
