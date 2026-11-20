@@ -1,0 +1,6 @@
+type,txn_count,fraud_count,fraud_rate_pct,pct_of_all_fraud
+CASH_OUT,1776660,4116,0.2317,50.12
+TRANSFER,133315,4109,3.0822,50.03
+CASH_IN,2131046,0,0,0
+PAYMENT,2013421,0,0,0
+DEBIT,318178,0,0,0
